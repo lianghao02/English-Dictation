@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>英文格線聽寫機</title>
+    <!-- 開發階段引用編譯後的 CSS -->
+    <style>
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+/*
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+body {
+  touch-action: none;
+  overflow-x: hidden;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 249 196 / var(--tw-bg-opacity, 1));
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity, 1));
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-\[1\] {
+  z-index: 1;
+}
+
+.z-\[2\] {
+  z-index: 2;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.min-h-\[1\.5em\] {
+  min-height: 1.5em;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-\[2\] {
+  flex: 2;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.cursor-crosshair {
+  cursor: crosshair;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.touch-none {
+  touch-action: none;
+}
+
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.resize {
+  resize: both;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.rounded-t-3xl {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.border-8 {
+  border-width: 8px;
+}
+
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
+.border-r {
+  border-right-width: 1px;
+}
+
+.border-t-2 {
+  border-top-width: 2px;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+
+.border-green-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(74 222 128 / var(--tw-border-opacity, 1));
+}
+
+.border-red-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 165 165 / var(--tw-border-opacity, 1));
+}
+
+.border-sky-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(224 242 254 / var(--tw-border-opacity, 1));
+}
+
+.border-sky-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(186 230 253 / var(--tw-border-opacity, 1));
+}
+
+.border-sky-blue {
+  --tw-border-opacity: 1;
+  border-color: rgb(79 195 247 / var(--tw-border-opacity, 1));
+}
+
+.border-yellow-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(254 249 195 / var(--tw-border-opacity, 1));
+}
+
+.border-yellow-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(250 204 21 / var(--tw-border-opacity, 1));
+}
+
+.bg-\[\#78909C\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(120 144 156 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+}
+
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
+}
+
+.bg-paper-yellow {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 249 196 / var(--tw-bg-opacity, 1));
+}
+
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity, 1));
+}
+
+.bg-sky-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 249 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-sky-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 165 233 / var(--tw-bg-opacity, 1));
+}
+
+.bg-warm-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 183 77 / var(--tw-bg-opacity, 1));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+.bg-white\/95 {
+  background-color: rgb(255 255 255 / 0.95);
+}
+
+.bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity, 1));
+}
+
+.bg-yellow-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 252 232 / var(--tw-bg-opacity, 1));
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-comic {
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-700 {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity, 1));
+}
+
+.text-green-600 {
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity, 1));
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+
+.text-sky-500 {
+  --tw-text-opacity: 1;
+  color: rgb(14 165 233 / var(--tw-text-opacity, 1));
+}
+
+.text-sky-600 {
+  --tw-text-opacity: 1;
+  color: rgb(2 132 199 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-yellow-400 {
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity, 1));
+}
+
+.text-yellow-600 {
+  --tw-text-opacity: 1;
+  color: rgb(202 138 4 / var(--tw-text-opacity, 1));
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_-4px_20px_rgba\(0\2c 0\2c 0\2c 0\.1\)\] {
+  --tw-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  --tw-shadow-colored: 0 -4px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-md {
+  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-green-200 {
+  --tw-shadow-color: #bbf7d0;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-red-200 {
+  --tw-shadow-color: #fecaca;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-sky-200 {
+  --tw-shadow-color: #bae6fd;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.ring-8 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(8px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-white\/50 {
+  --tw-ring-color: rgb(255 255 255 / 0.5);
+}
+
+.blur {
+  --tw-blur: blur(8px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-md {
+  --tw-drop-shadow: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-sm {
+  --tw-drop-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur-sm {
+  --tw-backdrop-blur: blur(4px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.selection\:bg-sky-blue *::-moz-selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 195 247 / var(--tw-bg-opacity, 1));
+}
+
+.selection\:bg-sky-blue *::selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 195 247 / var(--tw-bg-opacity, 1));
+}
+
+.selection\:text-white *::-moz-selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.selection\:text-white *::selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.selection\:bg-sky-blue::-moz-selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 195 247 / var(--tw-bg-opacity, 1));
+}
+
+.selection\:bg-sky-blue::selection {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 195 247 / var(--tw-bg-opacity, 1));
+}
+
+.selection\:text-white::-moz-selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.selection\:text-white::selection {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:border-sky-300:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(125 211 252 / var(--tw-border-opacity, 1));
+}
+
+.hover\:bg-green-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 163 74 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-red-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-sky-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(2 132 199 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:shadow-xl:hover {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:brightness-110:hover {
+  --tw-brightness: brightness(1.1);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.focus\:border-sky-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(14 165 233 / var(--tw-border-opacity, 1));
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.active\:scale-95:active {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 768px) {
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:w-\[320px\] {
+    width: 320px;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
+  .md\:rounded-none {
+    border-radius: 0px;
+  }
+
+  .md\:p-12 {
+    padding: 3rem;
+  }
+
+  .md\:p-6 {
+    padding: 1.5rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .md\:shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-\[380px\] {
+    width: 380px;
+  }
+}
+
+</style>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔤</text></svg>">
+</head>
+
+<body
+    class="h-screen w-screen overflow-hidden bg-paper-yellow flex flex-col md:flex-row text-gray-800 font-comic selection:bg-sky-blue selection:text-white">
+
+    <!-- Main Canvas Area (Left on Desktop, Top on Mobile) -->
+    <!-- order-1 for both to keep content logical, but Flex direction handles layout -->
+    <main
+        class="flex-grow relative flex flex-col items-center justify-center p-2 md:p-8 h-full w-full overflow-hidden order-1">
+
+        <!-- Canvas Wrapper: Will be sized by JS or CSS aspect ratio, limited by container -->
+        <div id="canvas-wrapper"
+            class="relative shadow-2xl bg-white rounded-3xl overflow-hidden cursor-crosshair touch-none select-none ring-8 ring-white/50">
+            <!-- Grid Background -->
+            <div id="grid-bg" class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></div>
+            <!-- Hint Canvas -->
+            <canvas id="hint-canvas"
+                class="absolute top-0 left-0 w-full h-full pointer-events-none z-[1] opacity-40"></canvas>
+            <!-- Drawing Canvas -->
+            <canvas id="drawing-canvas" class="block relative z-[2] touch-none"></canvas>
+        </div>
+
+        <!-- Confetti Canvas (Overlay) -->
+        <canvas id="confetti-canvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-50 hidden"></canvas>
+
+        <!-- Message Box (Overlay) -->
+        <div id="message-box"
+            class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/95 p-8 rounded-3xl shadow-2xl text-center text-4xl font-bold z-50 hidden border-4 border-sky-blue backdrop-blur-sm animate-bounce">
+        </div>
+    </main>
+
+    <!-- Sidebar / Controls Area (Right on Desktop, Bottom on Mobile) -->
+    <aside
+        class="w-full md:w-[320px] lg:w-[380px] md:h-full bg-white md:shadow-2xl z-20 flex flex-col justify-between p-4 md:p-6 gap-4 order-2 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] rounded-t-3xl md:rounded-none transition-all">
+
+        <!-- Top Section of Sidebar -->
+        <div class="flex flex-col gap-4">
+            <header class="text-center md:text-left border-b-2 border-dashed border-gray-200 pb-4">
+                <h1 class="text-2xl md:text-3xl font-bold text-sky-500">🔤 聽寫機</h1>
+                <p class="text-gray-400 text-sm mt-1">English Grid Dictation</p>
+            </header>
+
+            <!-- Status Display -->
+            <div id="status-text"
+                class="text-xl md:text-2xl font-bold text-gray-700 text-center md:text-left min-h-[1.5em] bg-yellow-50 p-4 rounded-xl border border-yellow-100">
+                準備好了嗎？
+            </div>
+
+            <!-- Score Board -->
+            <div class="flex items-center justify-between gap-2 bg-sky-50 p-3 rounded-xl border border-sky-100">
+                <div class="flex flex-col items-center flex-1 border-r border-sky-200">
+                    <span class="text-xs text-sky-600 font-bold uppercase">Stars</span>
+                    <span class="text-2xl font-black text-yellow-400 drop-shadow-sm">
+                        ⭐ <span id="stars-display" class="text-gray-700">0</span>
+                    </span>
+                </div>
+                <div class="flex flex-col items-center flex-1">
+                    <span class="text-xs text-sky-600 font-bold uppercase">Score</span>
+                    <span id="score-display" class="text-2xl font-black text-sky-500 font-mono">0</span>
+                </div>
+            </div>
+
+            <!-- Settings -->
+            <div class="flex flex-col gap-3">
+                <label class="text-sm font-bold text-gray-400 uppercase tracking-wider">設定 Settings</label>
+
+                <!-- Range Selection -->
+                <div class="flex gap-2 items-center">
+                    <select id="range-start" aria-label="起始字母"
+                        class="flex-1 p-2 bg-gray-50 border-2 border-gray-200 rounded-lg text-center font-bold"></select>
+                    <span class="text-gray-400 font-bold">~</span>
+                    <select id="range-end" aria-label="結束字母"
+                        class="flex-1 p-2 bg-gray-50 border-2 border-gray-200 rounded-lg text-center font-bold"></select>
+                </div>
+
+                <select id="case-select" aria-label="選擇字母大小寫"
+                    class="w-full p-3 text-lg bg-gray-50 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-sky-300 focus:outline-none focus:border-sky-500 transition-colors">
+                    <option value="upper" selected>大寫 (ABC)</option>
+                    <option value="lower">小寫 (abc)</option>
+                </select>
+                <select id="voice-select" aria-label="選擇發音語音"
+                    class="w-full p-3 text-lg bg-gray-50 border-2 border-gray-200 rounded-xl cursor-pointer hover:border-sky-300 focus:outline-none focus:border-sky-500 transition-colors">
+                    <option value="">語音載入中...</option>
+                </select>
+            </div>
+
+            <!-- Tools -->
+            <div class="flex flex-wrap gap-2">
+                <button id="btn-listen"
+                    class="flex-1 px-4 py-3 text-lg font-bold text-white bg-warm-orange rounded-xl shadow-md active:scale-95 transition-transform hidden hover:brightness-110 whitespace-nowrap">🔊
+                    重聽</button>
+                <button id="btn-hint"
+                    class="flex-1 px-4 py-3 text-lg font-bold text-white bg-yellow-400 rounded-xl shadow-md active:scale-95 transition-transform hidden hover:brightness-110 whitespace-nowrap">💡
+                    提示</button>
+                <button id="btn-bbox"
+                    class="flex-1 px-4 py-3 text-lg font-bold text-white bg-[#78909C] rounded-xl shadow-md active:scale-95 transition-transform hidden hover:brightness-110 whitespace-nowrap">⬜
+                    框線</button>
+            </div>
+        </div>
+
+        <!-- Bottom Section: Primary Actions -->
+        <div class="mt-auto pt-4 border-t-2 border-dashed border-gray-200">
+            <button id="btn-start"
+                class="w-full py-4 text-xl font-bold text-white bg-green-500 rounded-2xl shadow-lg shadow-green-200 active:scale-95 transition-all hover:bg-green-600 hover:shadow-xl">
+                ▶ 開始遊戲
+            </button>
+
+            <div id="game-actions" class="flex gap-3 hidden">
+                <button id="btn-clear"
+                    class="flex-1 py-4 text-xl font-bold text-white bg-red-400 rounded-2xl shadow-lg shadow-red-200 active:scale-95 transition-all hover:bg-red-500 whitespace-nowrap">
+                    🗑️ 清除
+                </button>
+                <button id="btn-check"
+                    class="flex-[2] py-4 text-xl font-bold text-white bg-sky-500 rounded-2xl shadow-lg shadow-sky-200 active:scale-95 transition-all hover:bg-sky-600 whitespace-nowrap">
+                    ✅ 檢查答案
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Hidden Validation Canvas -->
+    <canvas id="validation-canvas" class="hidden"></canvas>
+
+    <script>
+        /**
+         * Application State
+         */
+        const state = {
+            currentWord: '',
+            currentLetter: '',
+            isDrawing: false,
+            voices: [],
+            selectedVoice: null,
+            score: 0,
+            totalStars: 0, // Track stars
+            canvasSize: { width: 0, height: 0 },
+            caseMode: 'upper',
+            showBoundingBox: false,
+            showHintLetter: false,
+            rangeStart: 'A',
+            rangeEnd: 'Z'
+        };
+
+        /**
+         * Configuration
+         */
+        const config = {
+            lineWidth: 12,
+            strokeColor: '#333',
+            // Simple pixel match: percent of target pixels covered by user
+            passThreshold: 0.35
+        };
+
+        /**
+         * Word Bank (A-Z)
+         */
+        const wordBank = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i));
+
+        /**
+         * DOM Elements
+         */
+        const canvas = document.getElementById('drawing-canvas');
+        const ctx = canvas.getContext('2d', { willReadFrequently: true });
+        const vCanvas = document.getElementById('validation-canvas');
+        const vCtx = vCanvas.getContext('2d', { willReadFrequently: true });
+        const hCanvas = document.getElementById('hint-canvas');
+        const hCtx = hCanvas.getContext('2d');
+        const gridBg = document.getElementById('grid-bg');
+        const voiceSelect = document.getElementById('voice-select');
+        const statusText = document.getElementById('status-text');
+        const messageBox = document.getElementById('message-box');
+        const confettiCanvas = document.getElementById('confetti-canvas');
+        const canvasWrapper = document.getElementById('canvas-wrapper');
+        const starsDisplay = document.getElementById('stars-display');
+        const btnCheck = document.getElementById('btn-check');
+
+        /**
+         * Helper Functions
+         */
+        function updateMainButton(mode) {
+            const btn = btnCheck;
+            if (!btn) return;
+
+            if (mode === 'check') {
+                btn.textContent = "✅ 檢查答案";
+                btn.className = "flex-[2] py-4 text-xl font-bold text-white bg-sky-500 rounded-2xl shadow-lg shadow-sky-200 active:scale-95 transition-all hover:bg-sky-600 whitespace-nowrap";
+            } else if (mode === 'next') {
+                // Next Level
+                btn.textContent = "⏭️ 下一題";
+                btn.className = "flex-[2] py-4 text-xl font-bold text-white bg-green-500 rounded-2xl shadow-lg shadow-green-200 active:scale-95 transition-all hover:bg-green-600 animate-pulse whitespace-nowrap";
+            }
+        }
+
+        /**
+         * Initialization
+         */
+        window.addEventListener('load', () => {
+            initRangeSelectors();
+            initVoices();
+            resizeCanvas();
+        });
+
+        function initRangeSelectors() {
+            const startSel = document.getElementById('range-start');
+            const endSel = document.getElementById('range-end');
+
+            wordBank.forEach(l => {
+                startSel.add(new Option(l, l));
+                endSel.add(new Option(l, l));
+            });
+
+            endSel.value = 'Z'; // Default
+
+            const updateRange = () => {
+                state.rangeStart = startSel.value;
+                state.rangeEnd = endSel.value;
+                // Ensure End >= Start
+                if (state.rangeEnd < state.rangeStart) {
+                    state.rangeEnd = state.rangeStart;
+                    endSel.value = state.rangeStart;
+                }
+            };
+
+            startSel.addEventListener('change', updateRange);
+            endSel.addEventListener('change', updateRange);
+        }
+
+        // ... resizeCanvas ...
+        // ... drawGrid ...
+        // ... initVoices ...
+
+        // Add click listener to close feedback on canvas interaction
+        canvas.addEventListener('mousedown', () => messageBox.style.display = 'none');
+        canvas.addEventListener('touchstart', () => messageBox.style.display = 'none', { passive: true });
+        // Click on the box itself to close
+        messageBox.addEventListener('click', () => messageBox.style.display = 'none');
+
+        // ... Game Logic Event Listeners ...
+
+        function nextLevel() {
+            // Close feedback if open
+            messageBox.style.display = 'none';
+
+            clearCanvas();
+            document.getElementById('btn-next').classList.add('hidden');
+            document.getElementById('btn-check').classList.remove('hidden');
+            document.getElementById('btn-clear').classList.remove('hidden');
+            document.getElementById('btn-check').style.display = 'block';
+
+            statusText.textContent = "Listen carefully...";
+
+            // Filter Word Bank by Range
+            const startIndex = wordBank.indexOf(state.rangeStart);
+            const endIndex = wordBank.indexOf(state.rangeEnd);
+            const activePool = wordBank.slice(startIndex, endIndex + 1);
+
+            if (activePool.length === 0) return; // Should not happen
+
+            const idx = Math.floor(Math.random() * activePool.length);
+            let letter = activePool[idx];
+
+            state.currentLetter = letter;
+
+            setTimeout(() => {
+                speakLetter(state.currentLetter);
+                statusText.textContent = "Write the letter!";
+                // Keep hint state or reset? Let's keep user preference.
+                if (state.currentLetter) renderHintLayer();
+            }, 500);
+        }
+
+        // ... checkAnswer ...
+
+        function showFeedback(result) {
+            messageBox.style.display = 'block';
+            messageBox.classList.remove('hidden');
+
+            // Generate Stars HTML
+            const starHtml = Array(3).fill(0).map((_, i) =>
+                `<span class="${i < result.stars ? 'text-yellow-400 drop-shadow-md' : 'text-gray-300'} text-6xl mx-1 transition-all">★</span>`
+            ).join('');
+
+            // Color Theme
+            let borderColor = result.type === 'success' ? 'border-green-400' : (result.type === 'warning' ? 'border-yellow-400' : 'border-red-300');
+            let textColor = result.type === 'success' ? 'text-green-600' : (result.type === 'warning' ? 'text-yellow-600' : 'text-red-500');
+
+            messageBox.className = `fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/95 p-8 md:p-12 rounded-3xl shadow-2xl text-center z-50 border-8 ${borderColor} animate-bounce cursor-pointer backdrop-blur-sm select-none`;
+
+            messageBox.innerHTML = `
+                <div class="mb-2">${starHtml}</div>
+                <div class="text-5xl font-bold ${textColor} mb-2">${result.title}</div>
+                <div class="text-2xl text-gray-500 mb-4">${result.message}</div>
+                <div class="text-3xl font-mono bg-gray-100 rounded-full py-1 px-4 inline-block text-gray-700">
+                    相似度: ${result.score}%
+                </div>
+                <div class="mt-4 text-sm text-gray-400">(點擊任意處關閉)</div>
+            `;
+
+            speak(result.title);
+
+            if (result.type === 'success') {
+                fireConfetti();
+                // Update total score & stars
+                state.score += result.score;
+                state.totalStars += result.stars;
+                updateScoreUI();
+            } else if (result.stars > 0) {
+                // Even if Pass (2 stars), add points? Maybe yes.
+                state.score += result.score;
+                state.totalStars += result.stars;
+                updateScoreUI();
+            }
+
+            if (result.stars >= 2) {
+                document.getElementById('btn-check').classList.add('hidden');
+                document.getElementById('btn-next').classList.remove('hidden');
+                document.getElementById('btn-next').style.display = 'block';
+                // Don't auto-hide for success/pass, let user click Next or Box
+            } else {
+                // Fail: Auto hide still useful? Or forcing user to click?
+                // User said "Too long didn't disappear".
+                // Let's remove auto-hide entirely as requested "fix to close when clicking...".
+            }
+        }
+
+        function updateScoreUI() {
+            const scoreEl = document.getElementById('score-display');
+            const starsEl = document.getElementById('stars-display');
+            if (scoreEl) scoreEl.textContent = state.score;
+            if (starsEl) starsEl.textContent = state.totalStars;
+        }
+
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            renderHintLayer(); // Re-render hint if visible
+        });
+
+        // Resize Canvas to fit wrapper dynamically
+        function resizeCanvas() {
+            const mainArea = document.querySelector('main');
+            if (!mainArea) return;
+
+            // Available space in the Main Area
+            const availableWidth = mainArea.clientWidth;
+            const availableHeight = mainArea.clientHeight;
+
+            // Add some padding/margin safety
+            const padding = 32;
+            const maxWidth = availableWidth - padding;
+            const maxHeight = availableHeight - padding;
+
+            // Target Aspect Ratio
+            // Mobile (Portrait): Square (1:1) or slightly tall (0.9)
+            // Desktop (Landscape): Landscape (4:3 -> 1.33)
+            const isMobile = window.innerWidth < 768;
+            const targetRatio = isMobile ? 0.95 : 1.33;
+
+            let width = maxWidth;
+            let height = width / targetRatio;
+
+            // If height exceeds available height, scale down
+            if (height > maxHeight) {
+                height = maxHeight;
+                width = height * targetRatio;
+            }
+
+            // Floor values to avoid subpixel blur
+            width = Math.floor(width);
+            height = Math.floor(height);
+
+            // Update DOM size (buffer size)
+            canvas.width = width;
+            canvas.height = height;
+            vCanvas.width = width;
+            vCanvas.height = height;
+            hCanvas.width = width;
+            hCanvas.height = height;
+
+            // Update wrapper size explicitly to center it
+            canvasWrapper.style.width = `${width}px`;
+            canvasWrapper.style.height = `${height}px`;
+
+            state.canvasSize = { width, height };
+
+            // Reset Context Styles
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            // Scale line width with size
+            ctx.lineWidth = Math.max(12, width / 60);
+            ctx.strokeStyle = config.strokeColor;
+
+            drawGrid();
+            if (state.currentLetter) renderHintLayer();
+        }
+
+        function drawGrid() {
+            const h = state.canvasSize.height;
+            // Full-fill Grid Strategy
+            // Top: 15%, Bottom: 80% -> Writing Space = 65% of screen height
+            const top = h * 0.15;
+            const bottom = h * 0.80;
+            const middle = (top + bottom) / 2;
+            const descender = h * 0.95;
+
+            gridBg.innerHTML = `
+                <svg width="100%" height="100%">
+                    <!-- Top Line (Sky Blue) -->
+                    <line x1="0" y1="${top}" x2="100%" y2="${top}" stroke="#4FC3F7" stroke-width="3" />
+                    <!-- Middle Line (Dashed, Grey) -->
+                    <line x1="0" y1="${middle}" x2="100%" y2="${middle}" stroke="#aaa" stroke-width="4" stroke-dasharray="15,15" />
+                    <!-- Base Line (Red) -->
+                    <line x1="0" y1="${bottom}" x2="100%" y2="${bottom}" stroke="#ff6b6b" stroke-width="3" />
+                    <!-- Descender Line (Pink) -->
+                    <line x1="0" y1="${descender}" x2="100%" y2="${descender}" stroke="#EF9A9A" stroke-width="2" />
+                </svg>
+            `;
+        }
+
+        /**
+         * Voice / TTS
+         */
+        function initVoices() {
+            const populateVoices = () => {
+                state.voices = window.speechSynthesis.getVoices();
+                voiceSelect.innerHTML = '';
+
+                // Filter Strategy:
+                // 1. American English (en-US)
+                // 2. British English (en-GB)
+                // 3. Taiwanese (zh-TW) - Often used for specific accents or local fallback
+                const targetLangs = ['en-US', 'en-GB', 'zh-TW'];
+
+                const filteredVoices = state.voices.filter(v => targetLangs.includes(v.lang));
+
+                // Sort by priority: US > GB > TW
+                filteredVoices.sort((a, b) => {
+                    const priority = { 'en-US': 1, 'en-GB': 2, 'zh-TW': 3 };
+                    return (priority[a.lang] || 99) - (priority[b.lang] || 99);
+                });
+
+                if (filteredVoices.length === 0) {
+                    const op = document.createElement('option');
+                    op.text = "無符合條件的語音";
+                    voiceSelect.add(op);
+                    // Fallback to any voice if strictly needed, or just let it be empty
+                    return;
+                }
+
+                let defaultSelected = false;
+                filteredVoices.forEach((voice) => {
+                    const option = document.createElement('option');
+                    // Friendly Label
+                    let label = voice.name;
+                    if (voice.lang === 'en-US') label = `🇺🇸 美式 (${voice.name})`;
+                    else if (voice.lang === 'en-GB') label = `🇬🇧 英式 (${voice.name})`;
+                    else if (voice.lang === 'zh-TW') label = `🇹🇼 台式 (${voice.name})`;
+
+                    option.textContent = label;
+                    option.value = voice.name;
+
+                    // Default Select: Google US or first US voice
+                    if (!defaultSelected && (voice.name.includes('Google US') || voice.lang === 'en-US')) {
+                        option.selected = true;
+                        state.selectedVoice = voice;
+                        defaultSelected = true;
+                    }
+                    voiceSelect.appendChild(option);
+                });
+
+                if (!state.selectedVoice && filteredVoices.length > 0) {
+                    state.selectedVoice = filteredVoices[0];
+                }
+            };
+
+            populateVoices();
+            if (window.speechSynthesis.onvoiceschanged !== undefined) {
+                window.speechSynthesis.onvoiceschanged = populateVoices;
+            }
+
+            voiceSelect.addEventListener('change', () => {
+                const name = voiceSelect.value;
+                state.selectedVoice = state.voices.find(v => v.name === name);
+                speak("Voice selected");
+            });
+        }
+
+        function speak(text) {
+            if (!state.selectedVoice) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.voice = state.selectedVoice;
+            utterance.rate = 0.8;
+            utterance.pitch = 1.1;
+            window.speechSynthesis.speak(utterance);
+        }
+
+        /**
+         * Game Logic Refactored for New UI
+         */
+        document.getElementById('btn-start').addEventListener('click', startGame);
+        document.getElementById('btn-listen').addEventListener('click', () => speakLetter(state.currentLetter));
+        document.getElementById('btn-hint').addEventListener('click', () => {
+            // Toggle active style
+            const btn = document.getElementById('btn-hint');
+            state.showHintLetter = !state.showHintLetter;
+            if (state.showHintLetter) btn.style.opacity = '1';
+            else btn.style.opacity = '0.7';
+            renderHintLayer();
+        });
+        document.getElementById('btn-bbox').addEventListener('click', () => {
+            const btn = document.getElementById('btn-bbox');
+            state.showBoundingBox = !state.showBoundingBox;
+            if (state.showBoundingBox) btn.style.opacity = '1';
+            else btn.style.opacity = '0.7';
+            renderHintLayer();
+        });
+
+        document.getElementById('case-select').addEventListener('change', (e) => {
+            state.caseMode = e.target.value;
+            const msg = state.caseMode === 'upper' ? 'Big Letters' : 'Small Letters';
+            speak(msg);
+            // If game logic requires restart or re-render of current target if playing
+            if (state.currentLetter) {
+                renderHintLayer();
+            }
+        });
+
+        document.getElementById('btn-clear').addEventListener('click', clearCanvas);
+        document.getElementById('btn-check').addEventListener('click', checkAnswer);
+
+        function startGame() {
+            const btnStart = document.getElementById('btn-start');
+            const gameActions = document.getElementById('game-actions');
+
+            btnStart.classList.add('hidden');
+            gameActions.classList.remove('hidden');
+            gameActions.style.display = 'flex'; // Ensure flex layout
+
+            // Show Tools
+            document.getElementById('btn-listen').classList.remove('hidden');
+            document.getElementById('btn-hint').classList.remove('hidden');
+            document.getElementById('btn-bbox').classList.remove('hidden');
+
+            state.score = 0;
+            state.caseMode = document.getElementById('case-select').value;
+            nextLevel();
+        }
+
+        function nextLevel() {
+            // Close feedback if open
+            messageBox.style.display = 'none';
+
+            clearCanvas();
+            document.getElementById('btn-check').classList.remove('hidden');
+            document.getElementById('btn-clear').classList.remove('hidden');
+            document.getElementById('btn-check').style.display = 'block';
+
+            statusText.textContent = "Listen carefully...";
+
+            // Filter Word Bank by Range
+            const startIndex = wordBank.indexOf(state.rangeStart);
+            const endIndex = wordBank.indexOf(state.rangeEnd);
+            // Handle case where Z < A (swapped by user), logic in init ensures Start <= End
+            const activePool = wordBank.slice(startIndex, endIndex + 1);
+
+            const idx = Math.floor(Math.random() * activePool.length);
+            let letter = activePool[idx];
+
+            state.currentLetter = letter;
+
+            setTimeout(() => {
+                speakLetter(state.currentLetter);
+                statusText.textContent = "Write the letter!";
+                renderHintLayer();
+            }, 500);
+        }
+
+        function speakLetter(letter) {
+            speak(letter);
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function renderHintLayer() {
+            hCtx.clearRect(0, 0, hCanvas.width, hCanvas.height);
+            if (!state.currentLetter) return;
+
+            const target = state.caseMode === 'lower' ? state.currentLetter.toLowerCase() : state.currentLetter;
+            const h = canvas.height;
+            // 0.15 top, 0.80 bottom -> range 0.65
+            // Font size: fill ~90% of this range
+            const fontSize = state.caseMode === 'upper' ? Math.floor(h * 0.85) : Math.floor(h * 0.7);
+
+            const baseX = hCanvas.width / 2;
+            const gridBaseY = h * 0.80;
+
+            const font = `${fontSize}px "Comic Sans MS", "Chalkboard SE", sans-serif`;
+
+            if (state.showBoundingBox) {
+                hCtx.font = font;
+                const metrics = hCtx.measureText(target);
+                const width = metrics.width;
+                const ascent = metrics.actualBoundingBoxAscent;
+
+                const x = baseX - width / 2;
+                const y = gridBaseY - ascent;
+
+                hCtx.strokeStyle = 'rgba(120, 144, 156, 0.5)';
+                hCtx.lineWidth = 4;
+                hCtx.setLineDash([12, 12]);
+                hCtx.strokeRect(x - 20, y - 20, width + 40, ascent + metrics.actualBoundingBoxDescent + 40);
+                hCtx.setLineDash([]);
+            }
+
+            if (state.showHintLetter) {
+                hCtx.font = font;
+                hCtx.fillStyle = 'rgba(200, 200, 200, 0.5)';
+                hCtx.textBaseline = 'alphabetic';
+                hCtx.textAlign = 'center';
+                hCtx.fillText(target, baseX, gridBaseY);
+            }
+        }
+
+        /**
+         * Drawing Interaction
+         */
+        function getPos(e) {
+            const rect = canvas.getBoundingClientRect();
+            // Scaling factor in case canvas display size != buffer size (though we try to match)
+            const scaleX = canvas.width / rect.width;
+            const scaleY = canvas.height / rect.height;
+
+            const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+            return {
+                x: (clientX - rect.left) * scaleX,
+                y: (clientY - rect.top) * scaleY
+            };
+        }
+
+        function startDraw(e) {
+            // Close feedback if open
+            if (messageBox.style.display !== 'none') {
+                messageBox.style.display = 'none';
+                // Don't draw immediately on the 'close' click to prevent accidental lines
+                return;
+            }
+
+            // If user draws again after passing, reset to "Check" mode to allow re-scoring
+            if (state.isLevelComplete) {
+                state.isLevelComplete = false;
+                updateMainButton('check');
+            }
+
+            // Ensure context style is set (incase lost)
+            ctx.lineWidth = config.lineWidth || 12;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.strokeStyle = config.strokeColor || '#333';
+
+            e.preventDefault();
+            state.isDrawing = true;
+            const pos = getPos(e);
+            ctx.beginPath();
+            ctx.moveTo(pos.x, pos.y);
+        }
+
+        function draw(e) {
+            if (!state.isDrawing) return;
+            e.preventDefault(); // Prevent scrolling
+            const pos = getPos(e);
+            ctx.lineTo(pos.x, pos.y);
+            ctx.stroke();
+        }
+
+        function stopDraw() {
+            state.isDrawing = false;
+        }
+
+        canvas.addEventListener('mousedown', startDraw);
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', stopDraw);
+        canvas.addEventListener('mouseout', stopDraw);
+
+        canvas.addEventListener('touchstart', startDraw, { passive: false });
+        canvas.addEventListener('touchmove', draw, { passive: false });
+        canvas.addEventListener('touchend', stopDraw);
+
+        // Also allow clicking background to close?
+        // Maybe Global listener
+        document.addEventListener('mousedown', (e) => {
+            if (messageBox.style.display !== 'none' && !messageBox.contains(e.target)) {
+                // Check if it's the check button that triggered it
+                if (e.target.id === 'btn-check') return;
+                messageBox.style.display = 'none';
+            }
+        });
+
+        /**
+         * Validation Logic
+         */
+        function checkAnswer() {
+            // Smart Button: If Level Complete, Go Next
+            if (state.isLevelComplete) {
+                nextLevel();
+                return;
+            }
+
+            try {
+                // 1. Basic Validation
+                if (!state.currentLetter) {
+                    console.warn("CheckAnswer: No current letter set.");
+                    return;
+                }
+
+                statusText.textContent = "評分中... (Checking)";
+
+                const target = state.caseMode === 'lower' ? state.currentLetter.toLowerCase() : state.currentLetter;
+
+                // 2. Sync Dimensions (Crucial Fix for Round 2+)
+                if (vCanvas.width !== canvas.width || vCanvas.height !== canvas.height) {
+                    vCanvas.width = canvas.width;
+                    vCanvas.height = canvas.height;
+                }
+
+                // 3. Helper to draw validation letter
+                const drawValidation = () => {
+                    const h = vCanvas.height;
+                    const fontSize = state.caseMode === 'upper' ? Math.floor(h * 0.85) : Math.floor(h * 0.7);
+
+                    vCtx.clearRect(0, 0, vCanvas.width, vCanvas.height);
+                    vCtx.font = `${fontSize}px "Comic Sans MS", "Chalkboard SE", sans-serif`;
+                    vCtx.fillStyle = 'black';
+                    vCtx.textBaseline = 'alphabetic';
+                    vCtx.textAlign = 'center';
+                    vCtx.fillText(target, vCanvas.width / 2, vCanvas.height * 0.80);
+                };
+
+                // 4. Helper to compute pixels
+                const computeMatch = () => {
+                    const uData = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+                    const tData = vCtx.getImageData(0, 0, vCanvas.width, vCanvas.height).data;
+
+                    let stats = { target: 0, hit: 0, noise: 0 };
+
+                    for (let i = 0; i < uData.length; i += 4 * 4) {
+                        const uAlpha = uData[i + 3];
+                        const tAlpha = tData[i + 3];
+                        const isTarget = tAlpha > 100;
+                        const isUser = uAlpha > 100;
+
+                        if (isTarget) {
+                            stats.target++;
+                            if (isUser) stats.hit++;
+                        } else if (isUser) {
+                            stats.noise++;
+                        }
+                    }
+                    return stats;
+                };
+
+                // 5. Main scoring logic
+                const computeScore = (stats) => {
+                    if (stats.target === 0) return null; // Signal retry
+
+                    // Scoring Algorithm
+                    const coverage = stats.hit / stats.target;
+                    const noiseRatio = stats.noise / stats.target;
+                    const coverageMultiplier = 3.5;
+                    let rawScore = coverage * 100 * coverageMultiplier;
+                    let finalScore = Math.round(rawScore);
+
+                    if (noiseRatio > 1.5) {
+                        finalScore -= Math.round((noiseRatio - 1.5) * 15);
+                    }
+                    finalScore = Math.min(100, Math.max(0, finalScore));
+
+                    let stars = 0, title = "", message = "", type = "fail";
+
+                    if (finalScore >= 80) { stars = 3; title = "Perfect!"; message = "太棒了！完美！"; type = "success"; }
+                    else if (finalScore >= 50) { stars = 2; title = "Good!"; message = "通過！繼續加油！"; type = "warning"; }
+                    else if (finalScore >= 20) { stars = 1; title = "Keep Trying"; message = "有點像，再試一次？"; type = "fail"; }
+                    else { stars = 0; title = "Oops!"; message = "再寫一次看看！"; type = "fail"; }
+
+                    return { score: finalScore, stars, title, message, type };
+                };
+
+                // Execution
+                drawValidation();
+                let stats = computeMatch();
+                let result = computeScore(stats);
+
+                // Retry logic
+                if (!result) { // Check for null result
+                    console.warn("Target pixels 0. Retrying...");
+                    resizeCanvas(); // DOM Resize
+                    vCanvas.width = canvas.width; // Force Sync again
+                    vCanvas.height = canvas.height;
+
+                    drawValidation();
+                    stats = computeMatch();
+                    result = computeScore(stats);
+
+                    if (!result) {
+                        alert("Error: 無法比對文字 (Canvas Invalid)。請重整網頁。");
+                        return;
+                    }
+                }
+
+                showFeedback(result);
+
+                // Smart Button Logic
+                if (result.stars >= 2) { // Pass
+                    state.isLevelComplete = true;
+                    updateMainButton('next');
+                } else {
+                    state.isLevelComplete = false;
+                    updateMainButton('check');
+                }
+
+            } catch (e) {
+                console.error(e);
+                alert("程式發生錯誤: " + e.message);
+            }
+        }
+
+        function showFeedback(result) {
+            messageBox.style.display = 'block';
+            messageBox.classList.remove('hidden');
+
+            // Generate Stars HTML
+            const starHtml = Array(3).fill(0).map((_, i) =>
+                `<span class="${i < result.stars ? 'text-yellow-400 drop-shadow-md' : 'text-gray-300'} text-6xl mx-1 transition-all">★</span>`
+            ).join('');
+
+            // Color Theme
+            let borderColor = result.type === 'success' ? 'border-green-400' : (result.type === 'warning' ? 'border-yellow-400' : 'border-red-300');
+            let textColor = result.type === 'success' ? 'text-green-600' : (result.type === 'warning' ? 'text-yellow-600' : 'text-red-500');
+
+            messageBox.className = `fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/95 p-8 md:p-12 rounded-3xl shadow-2xl text-center z-50 border-8 ${borderColor} animate-bounce cursor-pointer backdrop-blur-sm select-none`;
+
+            messageBox.innerHTML = `
+                <div class="mb-2">${starHtml}</div>
+                <div class="text-5xl font-bold ${textColor} mb-2">${result.title}</div>
+                <div class="text-2xl text-gray-500 mb-4">${result.message}</div>
+                <div class="text-3xl font-mono bg-gray-100 rounded-full py-1 px-4 inline-block text-gray-700">
+                    相似度: ${result.score}%
+                </div>
+                <div class="mt-4 text-sm text-gray-400">(點擊任意處繼續)</div>
+            `;
+
+            // Allow close on click
+            messageBox.onclick = () => {
+                messageBox.style.display = 'none';
+                // Optional: If nice to have, maybe auto-next on click if passed?
+                // But user asked for button behavior. 
+                // Let's stick to Button does Next. Click closes feedback.
+            };
+
+            speak(result.title);
+
+            if (result.type === 'success' || result.stars > 0) {
+                if (result.type === 'success') fireConfetti();
+                // Update total score
+                state.score += result.score;
+                state.totalStars += result.stars;
+                updateScoreUI();
+            }
+        }
+
+        function updateScoreUI() {
+            const scoreEl = document.getElementById('score-display');
+            const starsEl = document.getElementById('stars-display');
+            if (scoreEl) scoreEl.textContent = state.score;
+            if (starsEl) starsEl.textContent = state.totalStars;
+        }
+
+
+        /**
+         * Confetti
+         */
+        function fireConfetti() {
+            confettiCanvas.classList.remove('hidden');
+            confettiCanvas.style.display = 'block';
+            const cCtx = confettiCanvas.getContext('2d');
+            confettiCanvas.width = window.innerWidth;
+            confettiCanvas.height = window.innerHeight;
+
+            const particles = [];
+            const colors = ['#f44336', '#2196F3', '#FFEB3B', '#4CAF50', '#FF9800'];
+
+            for (let i = 0; i < 80; i++) {
+                particles.push({
+                    x: window.innerWidth / 2,
+                    y: window.innerHeight / 2,
+                    vx: (Math.random() - 0.5) * 15,
+                    vy: (Math.random() - 0.5) * 15 - 5,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    size: Math.random() * 10 + 5,
+                    life: 100
+                });
+            }
+
+            function animate() {
+                cCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+                let active = false;
+
+                particles.forEach(p => {
+                    if (p.life > 0) {
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        p.vy += 0.5; // gravity
+                        p.size *= 0.95;
+                        p.life--;
+
+                        cCtx.fillStyle = p.color;
+                        cCtx.fillRect(p.x, p.y, p.size, p.size);
+                        active = true;
+                    }
+                });
+
+                if (active) {
+                    requestAnimationFrame(animate);
+                } else {
+                    confettiCanvas.style.display = 'none';
+                    confettiCanvas.classList.add('hidden');
+                }
+            }
+            animate();
+        }
+    </script>
+</body>
+
+</html>
