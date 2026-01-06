@@ -1425,12 +1425,12 @@ body {
 </head>
 
 <body
-    class="h-screen w-screen overflow-hidden bg-paper-yellow flex flex-col md:flex-row text-gray-800 font-comic selection:bg-sky-blue selection:text-white">
+    class="h-[100dvh] w-screen overflow-hidden bg-paper-yellow flex flex-col md:flex-row text-gray-800 font-comic selection:bg-sky-blue selection:text-white">
 
     <!-- Main Canvas Area (Left on Desktop, Top on Mobile) -->
     <!-- order-1 for both to keep content logical, but Flex direction handles layout -->
     <main
-        class="flex-grow relative flex flex-col items-center justify-center p-2 md:p-8 h-full w-full overflow-hidden order-1">
+        class="flex-1 min-h-0 relative flex flex-col items-center justify-center p-2 md:p-8 w-full overflow-hidden order-1">
 
         <!-- Canvas Wrapper: Will be sized by JS or CSS aspect ratio, limited by container -->
         <div id="canvas-wrapper"
@@ -1455,18 +1455,19 @@ body {
 
     <!-- Sidebar / Controls Area (Right on Desktop, Bottom on Mobile) -->
     <aside
-        class="w-full md:w-[320px] lg:w-[380px] md:h-full bg-white md:shadow-2xl z-20 flex flex-col justify-between p-4 md:p-6 gap-4 order-2 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] rounded-t-3xl md:rounded-none transition-all">
+        class="w-full md:w-[320px] lg:w-[380px] md:h-full bg-white md:shadow-2xl z-20 flex flex-col justify-between p-2 md:p-6 gap-2 order-2 shadow-[0_-4px_20px_rgba(0,0,0,0.1)] rounded-t-2xl md:rounded-none transition-all flex-shrink-0">
 
         <!-- Top Section of Sidebar -->
         <div class="flex flex-col gap-4">
             <header class="text-center md:text-left border-b-2 border-dashed border-gray-200 pb-4">
-                <h1 class="text-2xl md:text-3xl font-bold text-sky-500">🔤 聽寫機</h1>
+                <h1 class="text-xl md:text-3xl font-bold text-sky-500">🔤 聽寫機</h1>
                 <p class="text-gray-400 text-sm mt-1">English Grid Dictation</p>
             </header>
 
             <!-- Status Display -->
+            <!-- Status Display -->
             <div id="status-text"
-                class="text-xl md:text-2xl font-bold text-gray-700 text-center md:text-left min-h-[1.5em] bg-yellow-50 p-4 rounded-xl border border-yellow-100">
+                class="text-lg md:text-2xl font-bold text-gray-700 text-center md:text-left min-h-[1.5em] bg-yellow-50 p-2 md:p-4 rounded-xl border border-yellow-100">
                 準備好了嗎？
             </div>
 
@@ -1485,7 +1486,7 @@ body {
             </div>
 
             <!-- Settings -->
-            <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-2 md:gap-3">
                 <label class="text-sm font-bold text-gray-400 uppercase tracking-wider">設定 Settings</label>
 
                 <!-- Range Selection -->
@@ -1523,7 +1524,7 @@ body {
         </div>
 
         <!-- Bottom Section: Primary Actions -->
-        <div class="mt-auto pt-4 border-t-2 border-dashed border-gray-200">
+        <div class="mt-auto pt-2 md:pt-4 border-t-2 border-dashed border-gray-200">
             <button id="btn-start"
                 class="w-full py-4 text-xl font-bold text-white bg-green-500 rounded-2xl shadow-lg shadow-green-200 active:scale-95 transition-all hover:bg-green-600 hover:shadow-xl">
                 ▶ 開始遊戲
@@ -1764,19 +1765,20 @@ body {
             const mainArea = document.querySelector('main');
             if (!mainArea) return;
 
+            const isMobile = window.innerWidth < 768;
+
             // Available space in the Main Area
             const availableWidth = mainArea.clientWidth;
             const availableHeight = mainArea.clientHeight;
 
             // Add some padding/margin safety
-            const padding = 32;
+            const padding = isMobile ? 12 : 32;
             const maxWidth = availableWidth - padding;
             const maxHeight = availableHeight - padding;
 
             // Target Aspect Ratio
             // Mobile (Portrait): Square (1:1) or slightly tall (0.9)
             // Desktop (Landscape): Landscape (4:3 -> 1.33)
-            const isMobile = window.innerWidth < 768;
             const targetRatio = isMobile ? 0.95 : 1.33;
 
             let width = maxWidth;
